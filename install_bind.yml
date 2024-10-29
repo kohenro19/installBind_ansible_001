@@ -1,0 +1,10 @@
+# ~/install_bind.yml
+---
+- name: Install BIND DNS Server
+  hosts: all
+  become: yes  # Use sudo privileges
+  tasks:
+    - name: Install bind
+      yum:
+        name: bind
+        state: present
